@@ -1,0 +1,15 @@
+accelerate
+Augmentor
+einops
+ema-pytorch
+lpips
+numpy
+opencv-python
+Pillow
+scikit-image
+scipy
+sk-video
+thop
+torch
+torchvision
+tqdm
