@@ -25,7 +25,7 @@ UDBM-ICML26/
 |-- scripts/                    # configurable shell wrappers
 |-- data/                       # universal paired dataset loader
 |-- metrics/                    # PSNR, SSIM, NIQE utilities
-|-- pretrained/                 # copied final checkpoints
+|-- pretrained/                 # optional downloaded checkpoints
 |-- src_s1/
 |   |-- model_udbm_s1_s.py
 |   |-- model_udbm_s1_m.py
@@ -169,7 +169,16 @@ Keep file ordering and names consistent across each degraded folder and `cd11/cl
 
 ## Pretrained Weights
 
-Final weights copied into this repository are stored under `pretrained/`:
+The pretrained weights are not stored in this repository because the files are large.
+Download the full `pretrained/` directory from Google Drive and place it in the repository root.
+
+Google Drive:
+
+```text
+https://drive.google.com/file/d/1sJCfekxsBnJ6QH3JHiEa5ZDVUCSpGnRX/view?usp=sharing
+```
+
+After downloading, the directory should look like this:
 
 ```text
 pretrained/
@@ -185,6 +194,9 @@ pretrained/
 ```
 
 `stage1.pt` is the uncertainty estimator checkpoint. `model-600.pt` is the Stage 2 UDBM checkpoint.
+
+The evaluation scripts assume this layout by default. If you keep the weights somewhere else, pass
+`--ckpt_path_s1` and `--results_folder` explicitly.
 
 ## Shell Commands
 
@@ -265,7 +277,7 @@ The `scripts/` directory contains more configurable wrappers that use `conda run
 | `scripts/train_s1.sh` | Train Stage 1 uncertainty estimator |
 | `scripts/train_s2.sh` | Train Stage 2 UDBM bridge |
 | `scripts/train_two_stage.sh` | Run Stage 1 and then Stage 2 |
-| `scripts/test_pretrained.sh` | Evaluate copied pretrained weights |
+| `scripts/test_pretrained.sh` | Evaluate downloaded pretrained weights |
 | `scripts/test_checkpoint.sh` | Evaluate checkpoints from `ckpt_universal` |
 
 Common variables:
@@ -547,10 +559,10 @@ CUDA_VISIBLE_DEVICES=0,1 VARIANT=L DATAROOT=./datasets/all_in_one sh train.sh
 ## Citation
 
 ```bibtex
-@article{tu2026unifying,
+@inproceedings{tu2026unifying,
   title={Unifying Heterogeneous Degradations: Uncertainty-Aware Diffusion Bridge Model for All-in-One Image Restoration},
   author={Tu, Luwei and Wu, Jiawei and Luo, Xing and Jin, Zhi},
-  journal={ICML},
-  year={2026}
+  booktitle = {International Conference on Machine Learning},
+  year      = {2026}
 }
 ```
