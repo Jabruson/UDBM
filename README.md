@@ -447,10 +447,6 @@ Default task ratio:
 fog : light_only : rain : snow : blur = 8 : 2 : 4 : 4 : 2
 ```
 
-| `gradient_accumulate_every` | Task batch sizes | Per-step sum | Effective sum |
-|---:|---|---:|---:|
-| `1` | `16,4,8,8,4` | `40` | `40` |
-| `2` | `8,2,4,4,2` | `20` | `40` |
 
 Override the task batch sizes with:
 
