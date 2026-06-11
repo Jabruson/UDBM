@@ -103,6 +103,9 @@ The testing loader follows the original all-in-one restoration task folders, inc
 
 ```text
 <dataroot>/
+|-- LOL/test/
+|   |-- low                         # light_only input
+|   `-- high                        # light_only target
 |-- syn_rain/test/
 |   |-- Test100
 |   |-- Test1200
@@ -448,17 +451,6 @@ fog : light_only : rain : snow : blur = 8 : 2 : 4 : 4 : 2
 ```
 
 
-Override the task batch sizes with:
-
-```bash
-CUDA_VISIBLE_DEVICES=0,1 accelerate launch --multi_gpu --num_processes 2 \
-  train_s2.py \
-  --variant L \
-  --gradient_accumulate_every 2 \
-  --task_batch_sizes 8,2,4,4,2 \
-  --ckpt_path_s1 ./ckpt_universal/udbm_l_s1/model-600.pt
-```
-
 ## Evaluation
 
 Evaluate a checkpoint trained under `ckpt_universal`:
@@ -518,6 +510,7 @@ Task expansion:
 
 | Input task | Expanded test sets |
 |---|---|
+| `light_only` | `light_only` |
 | `rain` | `rain1`, `rain2`, `rain3`, `rain4`, `rain5` |
 | `snow` | `snow1`, `snow2` |
 | `real_dark` | `real_dark_mef`, `real_dark_dice`, `real_dark_npe` |
