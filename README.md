@@ -547,10 +547,10 @@ CUDA_VISIBLE_DEVICES=0,1 VARIANT=L DATAROOT=./datasets/all_in_one sh train.sh
 ## Citation
 
 ```bibtex
-@inproceedings{udbm2026,
-  title     = {Unifying Heterogeneous Degradations: Uncertainty-Aware Diffusion Bridge Model for All-in-One Image Restoration},
-  author    = {Anonymous},
-  booktitle = {International Conference on Machine Learning},
-  year      = {2026}
+@article{tu2026unifying,
+  title={Unifying Heterogeneous Degradations: Uncertainty-Aware Diffusion Bridge Model for All-in-One Image Restoration},
+  author={Tu, Luwei and Wu, Jiawei and Luo, Xing and Jin, Zhi},
+  journal={ICML},
+  year={2026}
 }
 ```
