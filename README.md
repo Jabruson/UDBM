@@ -1,4 +1,4 @@
-# UDBM-ICML26
+# UDBM-ICML26 [Link of the paper](https://proceedings.mlr.press/v306/tu26d.html)
 
 Official training and evaluation code for **Uncertainty-Aware Diffusion Bridge Model (UDBM)**.
 
