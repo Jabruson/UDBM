@@ -1342,7 +1342,6 @@ class ResidualDiffusion(nn.Module):
         times = list(reversed(times.int().tolist()))
         t0 = torch.randint(1, 2, (batch,), device=x_input.device).long()
         uncertain=model_s1(torch.cat((x_input, x_input), dim=1),[self.alphas_cumsum[t0]*self.num_timesteps,self.betas_cumsum[t0]*self.num_timesteps])[0]
-        uncertain=uncertain+torch.randn_like(x_input)*1.0
         uncertain.clamp_(-2,2)
 
         uncertain=torch.abs(uncertain)*0.5
