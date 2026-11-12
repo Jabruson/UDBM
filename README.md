@@ -177,9 +177,9 @@ Download the full `pretrained/` directory from Google Drive and place it in the 
 
 Google Drive:
 
-```text
-[https://drive.google.com/file/d/1sJCfekxsBnJ6QH3JHiEa5ZDVUCSpGnRX/view?usp=sharing](https://drive.google.com/file/d/1ik59tZuTUJ-v_CnV66Eg0xYwRO8_haNJ/view?usp=drive_link)
-```
+
+[Google Drive Link](https://drive.google.com/file/d/1ik59tZuTUJ-v_CnV66Eg0xYwRO8_haNJ/view?usp=drive_link)
+
 
 After downloading, the directory should look like this:
 
