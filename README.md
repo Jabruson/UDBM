@@ -180,6 +180,9 @@ Google Drive:
 
 [Google Drive Link](https://drive.google.com/file/d/1ik59tZuTUJ-v_CnV66Eg0xYwRO8_haNJ/view?usp=drive_link)
 
+百度网盘:
+
+[Baidu,提取码: xniq](https://pan.baidu.com/s/1ona7mDJoUkInsnM5RFVJwQ)
 
 After downloading, the directory should look like this:
 
